@@ -13,6 +13,7 @@ It showcases my skills, projects, and contact information.
 ## Technologies Used
 - HTML
 - CSS
+- Java script
 
 ## How to View
 1. Download or clone the repository.
