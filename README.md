@@ -1,5 +1,5 @@
 # Project Title
-Divya Soolagillu Portfolio Website
+Digital Menu Card
 
 ## Description
 This is a personal portfolio website created using **HTML** and **CSS**.  
