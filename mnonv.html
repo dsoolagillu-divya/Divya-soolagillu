@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+           
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://i.ytimg.com/vi/dKI_jhu8vkI/hqdefault.jpg" alt="">
+            <div class="info">
+            <h3>Chicken Schezwan Biryani</h3>
+                <p>&#8377;280</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+        <div class="items" id="d2"><img src="https://ubfoody.com/wp-content/uploads/2023/02/Chicken-Spicy-Biryani.jpg" alt="">
+         <div class="info">
+            <h3>Chicken Biriyani</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d3"><img src="https://spiceeats.com/wp-content/uploads/2020/07/Mutton-Biryani.jpg" alt="">
+         <h3>Mutton Biryani</h3>
+                <p>&#8377;350</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d4"><img src="https://vismaifood.com/storage/app/uploads/public/503/f3a/d32/thumb__1200_0_0_0_auto.jpg" alt="">
+         <h3>Egg Biriyani</h3>
+                <p>&#8377;180</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d5"><img src="https://tse4.mm.bing.net/th/id/OIP.9yhePr477H65AZfYGSjfJwHaHa?cb=12&w=800&h=800&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Praw Biriyani</h3>
+                <p>&#8377;280</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d6"> <img src="https://c.ndtvimg.com/2022-02/ceg29dsg_fish-biryani_625x300_16_February_22.jpg?im=FaceCrop" alt="">
+         <h3>Fish Biriyani</h3>
+                <p>&#8377;260</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       <div class="items" id="d7"><img src="https://swatisani.net/kitchen/wp-content/uploads/2015/10/IMG_9526.jpg" alt="">
+     <h3>Hyderabadi Chicken Biryani</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d8"><img src="https://tse2.mm.bing.net/th/id/OIP.qMxhIUTvGnF_xuz8vEIduwHaE6?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Lucknowi Mutton Biryani</h3>
+                <p>&#8377;350</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d9"><img src="https://www.cookwithkushi.com/wp-content/uploads/2016/04/IMG_9433_.jpg" alt="">
+         <h3>Chicken Tikka Biryan</h3>
+                <p>&#8377;370</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d10"><img src="https://tse4.mm.bing.net/th/id/OIP.i3FjV_zmIOTzaq_hWRMR4wHaE9?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Keema Biryani</h3>
+                <p>&#8377;280</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d11"><img src="https://th.bing.com/th/id/R.566823e7794416a26e4705f907ab3e70?rik=PruTRxQVxqwXtQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f7%2f7c%2fHyderabadi_Chicken_Biryani.jpg&ehk=zVILhjDnGvHYQHootupTVp%2f0k0e3MtgmXN8aBnYW4ms%3d&risl=1&pid=ImgRaw&r=0w" alt="">
+         <h3>Andhra Chicken Biryani</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d12"><img src="https://img.onmanorama.com/content/dam/mm/en/food/recipe/images/2021/1/11/fish-biriyani.jpg?w=1120&h=583" alt="">
+         <h3>Malabar Fish Biryani</h3>
+                <p>&#8377;290</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d13"><img src="https://static.vecteezy.com/system/resources/previews/048/067/082/non_2x/biryani-dish-malabar-biryani-with-thalassery-chicken-isolated-illustration-on-a-transparent-background-png.png" alt="">Corn Cheese Balls
+         <h3>Kadai Chicken Biryani</h3>
+                <p>&#8377;270</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d14"><img src="https://tse3.mm.bing.net/th/id/OIP.NzQwP4Nb3WaYRlzmkEe7XQHaJQ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Chicken Dum Biryani</h3>
+                <p>&#8377;240</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d15"><img src="https://vismaifood.com/storage/app/uploads/public/980/eb9/ed6/thumb__1200_0_0_0_auto.jpg" alt="">
+         <h3>Mutton Dum Biryani</h3>
+                <p>&#8377;340</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       
+        <div class="items" id="d16"><img src="https://tse4.mm.bing.net/th/id/OIP.xHZTRoKxHNSn5kO2OO_CqgHaD4?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Prawn Pulao</h3>
+                <p>&#8377;270</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       
+        <div class="items" id="d17"><img src="https://www.chefkunalkapur.com/wp-content/uploads/2021/03/egg-biryani-1-scaled.jpeg?v=1625193642" alt="">
+         <h3>Egg Pulao</h3>
+                <p>&#8377;200</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       
+       
+    </div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    </script>
+</body>
+</html>

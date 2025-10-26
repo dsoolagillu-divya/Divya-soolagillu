@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+           
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg" alt="">
+            <div class="info">
+            <h3>Veg Biriyani</h3>
+                <p>&#8377;180</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+        <div class="items" id="d2"><img src="https://tse1.mm.bing.net/th/id/OIP.h546ed_v0M2vzZ0-2XBPFAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <div class="info">
+            <h3>Panner Biriyani</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d3"><img src="https://www.indianveggiedelight.com/wp-content/uploads/2019/09/mushroom-biryani-featured.jpg" alt="">
+         <h3>Mushroom Biryani</h3>
+                <p>&#8377;220</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d4"><img src="https://i.pinimg.com/originals/57/1c/9f/571c9fd0d470f9b755075de87802dad0.jpg" alt="">
+         <h3>Mixed Vegetable Pulao</h3>
+                <p>&#8377;180</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d5"><img src="https://myspicetrunk.com/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-02-at-11.33.13-AM-1.jpeg?v=1707139287" alt="">
+         <h3>Peas Pulao</h3>
+                <p>&#8377;160</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d6"> <img src="https://static.wixstatic.com/media/26b5bf_79e0b343c7864b1a98f733e7a5be7cde~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_90,usm_0.66_1.00_0.01/26b5bf_79e0b343c7864b1a98f733e7a5be7cde~mv2.jpg" alt="">
+         <h3>Navratan Pulao</h3>
+                <p>&#8377;210</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       <div class="items" id="d7"><img src="https://www.whiskaffair.com/wp-content/uploads/2019/08/Paneer-Pulao-1-3-768x768.jpg" alt="">
+     <h3>Paneer Pulao</h3>
+                <p>&#8377;200</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d8"><img src="https://myfoodstory.com/wp-content/uploads/2018/07/Perfect-Jeera-Rice-Indian-Cumin-Rice-3-1080x617.jpg" alt="">
+         <h3>Jeera Rice</h3>
+                <p>&#8377;150</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d9"><img src="https://vismaifood.com/storage/app/uploads/public/c5d/83b/985/thumb__700_0_0_0_auto.jpg" alt="">
+         <h3>Gobi Fried Rice</h3>
+                <p>&#8377;150</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d10"><img src="https://cdn.grofers.com/assets/search/usecase/banner/schezwan_vegetable_fried_rice.png" alt="">
+         <h3>Schezwan Veg Rice</h3>
+                <p>&#8377;200</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d11"><img src="https://www.simplyrecipes.com/thmb/vXAby2R_7_SmVeXxjAc6uutFm10=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Tomato-Rice-LEAD-01-7bfe3f558b124c6e80d47a1da8ef97ae.jpg" alt="">
+         <h3>Tomato Rice</h3>
+                <p>&#8377;130</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d12"><img src="https://th.bing.com/th/id/R.86dfdebcd32773f64bf3a85c0019712b?rik=c0og6%2bV7puYmzg&riu=http%3a%2f%2foventales.com%2fwp-content%2fuploads%2f2017%2f08%2fGheeRice001.jpg&ehk=FaBW27F7YSqy%2bxqZ5wabhncZYom5lANqSW%2fWqvv1aLs%3d&risl=&pid=ImgRaw&r=0" alt="">Corn Cheese Balls
+         <h3>Ghee Rice</h3>
+                <p>&#8377;140</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       
+    </div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    </script>
+</body>
+</html>

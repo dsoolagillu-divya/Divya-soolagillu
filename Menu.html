@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+        background-image: url(https://media.tenor.com/6b6yIgukjD8AAAAd/heidi-eine.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+           }
+          .container{
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            gap: 20px;
+            color: rgb(231, 214, 220);
+         }
+         .menubutton{
+                    background-color: #080808;
+                    color: white;
+                    border: none;
+                    padding: 15px 25px;
+                    font-size: 215px;
+                    border-top-left-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    box-shadow: 10px 0px 40px black;
+                    font-style: italic;
+                    font-size: 50px;
+    
+         }
+       
+           
+
+.menubutton:hover {
+  background-color: #ff85c1;
+}
+        
+        
+    </style>
+</head>
+<body>
+   <div class="container">
+    <button onclick="vegstarter()" id="vegbutton" class="menubutton" >🥗 Starter-Veg</button>
+    <button onclick="nonvegstarter()"  id="nonvegbutton" class="menubutton">🍗Starter-Non Veg</button>
+    <button onclick="ib()"  id="indianbutton" class="menubutton"> 🍞Indian Breads (Tandoor & Tava)</button>
+    <button onclick="mainveg()"  id="mainvegbutton" class="menubutton">🥘Main course-Veg🌿</button>
+    <button onclick="mnonv()"  id="mainnonvegbutton" class="menubutton" >Main course-Non Veg🍹</button>
+    <button onclick="salad()"  id="saladbutton" class="menubutton">🥗Salads & Accompaniments</button>
+    <button onclick="ba()"  id="bevarageAbutton" class="menubutton">🍸Bevarages-Alchoholic</button>
+    <button onclick="rbc()"  id="ricebutton" class="menubutton"> 🍚Rice & Biryani combos</button>
+    <button onclick="de()"  id="dessertbutton" class="menubutton">🍨 Desserts</button>
+    <button onclick="bna()"  id="bevarageNAbutton" class="menubutton">Beverages🧃Non-Alcoholic</button>
+    <button onclick="k()"  id="kidsbutton" class="menubutton">Kids🧒</button>
+    
+    
+   
+</div>
+
+   
+ <script>
+  function vegstarter() {
+    window.location.href = "vegstarter.html";
+  }
+  function nonvegstarter(){
+    window.location.href="nonvegstarter.html"
+  }
+  function mainveg(){
+    window.location.href="mainveg.html"
+  }
+  function mnonv(){
+    window.location.href="mnonv.html"
+  }
+  function ib(){
+    window.location.href="ib.html"
+  }
+  function salad(){
+    window.location.href="salad.html"
+  }
+  function ba(){
+    window.location.href="ba.html"
+  }
+  function bna(){
+    window.location.href="bna.html"
+  }
+  function rbc(){
+    window.location.href="rbc.html"
+  }
+  function de(){
+    window.location.href="de.html"
+  }
+  function k(){
+    window.location.href="k.html"
+  }
+  </script>
+
+  
+</body>
+</html>

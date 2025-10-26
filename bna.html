@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+        
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://tse2.mm.bing.net/th/id/OIP.kOUi5uQx9X3wEDmUb1rCfQHaLH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+            <div class="info">
+            <h3 >Shirley Temple – Ginger ale</h3>
+                <p>&#8377;70</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+        <div class="items" id="d2"><img src="https://tse2.mm.bing.net/th/id/OIP.5sATlzyDDbiE3mQjh81LfgHaMd?cb=12&w=500&h=841&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <div class="info">
+            <h3>Fruit Punch – Mixed seasonal fruits</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d3"><img src="https://app.contentgoblin.ai/media/users/304/article_images/minted_lemon_basil_cooler.jpg" alt="">
+         <h3>Lemon Basil Cooler</h3>
+                <p>&#8377;50</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d4"><img src="https://tse4.mm.bing.net/th/id/OIP.0QnLEXL77FopwHvBJ3ceoQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Cucumber Mint Cooler</h3>
+                <p>&#8377;80</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d5"><img src="https://www.backtoorganic.com/wp-content/uploads/2013/06/watermelon-lemonade-with-a-watermelon-slice-and-fresh-mint.jpg" alt="">
+         <h3>Watermelon Lemonade</h3>
+                <p>&#8377;80</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d6"> <img src="https://tse2.mm.bing.net/th/id/OIP.NAmdO2HgT0G5qsNrhz3Q1AHaLH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3> Mango Lassi</h3>
+                <p>&#8377;60</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       <div class="items" id="d7"><img src="https://tse2.mm.bing.net/th/id/OIP.tLJgk06a2RmcoXmgQDUpQwHaLH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+     <h3>Strawberry Banana Smoothie</h3>
+                <p>&#8377;130</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d8"><img src="https://tse1.explicit.bing.net/th/id/OIP.IZxL1TcxrgNjUNQKx7EH8gHaLJ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Banana Oat Smoothie</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d9"><img src="https://tse1.mm.bing.net/th/id/OIP.IJk04Iu3d1jM7uIuWYzqjAHaLH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Blueberry Yogurt Smoothie</h3>
+                <p>&#8377;150</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d10"><img src="https://snackfax.com/wp-content/uploads/2023/02/masala-chai.png" alt="">
+         <h3>Masala Chai</h3>
+                <p>&#8377;50</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d11"><img src="https://static.toiimg.com/photo/86367814.cms" alt="">
+         <div class="info">
+            <h3>Green Tea Infusion</h3>
+                <p>&#8377;60</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d12"><img src="https://mews.in/wp-content/uploads/2022/08/benefits-of-coconut-water-mews-f-e1661951422782.jpg" alt="">
+         <div class="info">
+            <h3>Coconut Water Cooler</h3>
+                <p>&#8377;70</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+          <div class="items" id="d13"><img src="https://bing.com/th?id=OSK.ba5544bd60136d70bc0331a5719efced" alt="">
+         <div class="info">
+            <h3>Iced Hibiscus Tea</h3>
+                <p>&#8377;120</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div> 
+        <div class="items" id="d11"><img src="https://i.pinimg.com/originals/bf/3d/48/bf3d48d029553e4edee2d30588717787.jpg" alt="">
+         <div class="info">
+            <h3>Pomegranate Fizz</h3>
+                <p>&#8377;110</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d11"><img src="https://th.bing.com/th/id/R.5c73d6255ea16628d2938d2fca11bf34?rik=pLrvoQQ98qja5g&riu=http%3a%2f%2featup.kitchen%2fwp-content%2fuploads%2f2018%2f07%2fCold-Brewed-Coffee_DSCF9691.jpg&ehk=DAq5CYkQoXhlHJ8e6IdkItSQ9NhSg4TW323qY%2bgapPU%3d&risl=&pid=ImgRaw&r=0" alt="">
+         <div class="info">
+            <h3>Cold Brew Coffee</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d11"><img src="https://someindiangirl.com/wp-content/uploads/2021/07/Litchee-juice-lemonade-lychee-lemonade-2-of-10-683x1024.jpg" alt="">
+         <div class="info">
+            <h3>Lychee Lemonade</h3>
+                <p>&#8377;140</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+       
+       
+    </div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    </script>
+</body>
+</html>

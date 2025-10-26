@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+        
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://i.ibb.co/mCjR2wD3/Gemini-Generated-Image-mpcso8mpcso8mpcs.png"  alt="">
+            <div class="info">
+            <h3 >Royal Chicken Combo<br>
+• Chicken Dum Biryani<br>
+• Butter Chicken Curry<br>
+• Chicken Tikka Starter<br>
+• Fresh Lime Soda</h3>
+                <p>&#8377;870</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+            <div class="items" id="d3"><img src="https://i.ibb.co/xdZSTMC/Gemini-Generated-Image-clmmb8clmmb8clmm.png" alt="">
+         <h3>Tandoori Chicken Feast Combo<br>
+• Chicken Tikka Biryani<br>
+• Kadai Chicken Curry<br>
+• Chicken Seekh Kebab<br>
+• Masala Cola</h3>
+                <p>&#8377;880</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d2"><img src="https://i.ibb.co/VcFHHM2x/Gemini-Generated-Image-855jgf855jgf855j.png"  alt="">
+         <div class="info">
+            <h3>Mughlai Mutton Combo<br>
+• Mutton Biryani<br>
+• Mutton Rogan Josh<br>
+• Shami Kebab<br>
+• Sweet Lassi</h3>
+                <p>&#8377;990</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        
+        
+        <div class="items" id="d4"><img src="https://i.ibb.co/v4prRGXZ/Gemini-Generated-Image-w8yvg5w8yvg5w8yv.png" alt="">
+         <h3>Coastal King Combo<br>
+• Malvani Fish Biryani<br>
+• Prawn Masala Curry<br>
+• Tandoori Fish Tikka<br>
+• Tender Coconut Drink</h3>
+                <p>&#8377;1080</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+    <div class="items" id="d5"><img src="https://i.ibb.co/TBqQFtqB/Gemini-Generated-Image-pd89jmpd89jmpd89.png" alt="">
+        <h3>Coastal Seafood Combo<br>
+• Prawn Biryani<br>
+• Goan Fish Curry<br>
+• Crispy Calamari Fry<br>
+• Tender Coconut Water</h3>
+                <p>&#8377;1050</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                </div>
+        <div class="items" id="d6"><img src="https://i.ibb.co/p6CCdn7B/Gemini-Generated-Image-cl1eifcl1eifcl1e.png" alt="">
+         <h3> Royal Mutton Combo<br>
+• Mutton Biryani<br>
+• Laal Maas Curry<br>
+• Mutton Seekh Kebab<br>
+• Masala Buttermilk
+</h3>
+             <p>&#8377;1080</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        
+        
+       
+    </div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    </script>
+</body>
+</html>

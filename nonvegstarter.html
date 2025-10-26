@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+           
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://spicebreeze.com/wp-content/uploads/2021/06/Chicken-Tikka-sq.jpg" alt="">
+            <div class="info">
+            <h3>Chicken Tikka</h3>
+                <p>&#8377;250</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+        <div class="items" id="d2"><img src="https://i.ytimg.com/vi/EAWVXD5Vn3I/maxresdefault.jpg" alt="">
+         <div class="info">
+            <h3>Mutton Seekh Kebab</h3>
+                <p>&#8377;280</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d3"><img src="https://aagamanrestaurant.com.au/wp-content/uploads/2023/09/amritsari-fish-fry-1292615420.jpg" alt="">
+         <h3>Fish Amritsari</h3>
+                <p>&#8377;260</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d4"><img src="https://hungryforever.net/wp-content/uploads/2015/12/prawn6.jpg" alt="">
+         <h3>Prawn Fry</h3>
+                <p>&#8377;300</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d5"><img src="https://th.bing.com/th/id/R.97a6e1e55ea7b62bc151786f39100753?rik=clDQNUVYxfMPhw&riu=http%3a%2f%2fyummykit.com%2fwp-content%2fuploads%2f2018%2f09%2fchicken-malai-tikka_edited.jpg&ehk=VeoVGx1IEm4SGSQmjbgdYj0oe4UF0eEto6z29ZFzu%2bE%3d&risl=1&pid=ImgRaw&r=0" alt="">
+         <h3>Chicken Malai Tikka</h3>
+                <p>&#8377;270</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d6"> <img src="https://tse2.mm.bing.net/th/id/OIP.21xfGQ9jUczQhBfBTgASHwHaEJ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Tandoori Chicken</h3>
+                <p>&#8377;250</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       <div class="items" id="d7"><img src="https://www.awesomecuisine.com/wp-content/uploads/2020/03/chilli-chicken.jpg" alt="">
+     <h3>Chilli Chicken</h3>
+                <p>&#8377;240</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d8"><img src="https://biryanibowlwa.com/wp-content/uploads/2021/05/Chicken-65.jpg" alt="">
+         <h3>Chicken 65</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d9"><img src="https://i0.wp.com/www.etfoodvoyage.com/wp-content/uploads/2022/05/rsz_air_fryer_tandoori_lamb_chops_3.jpg?w=819&ssl=1" alt="">
+         <h3>Mutton Chops</h3>
+                <p>&#8377;300</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d10"><img src="https://tse2.mm.bing.net/th/id/OIP.GSPIyHX4pUi3P0dHq7KBrgHaNK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Garlic Butter Prawns</h3>
+                <p>&#8377;320</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d11"><img src="https://2.bp.blogspot.com/-LYJz_7JbJEs/Vv1kc5Esa7I/AAAAAAAEmK0/QzkKEikVnxADtDvpi4Hvy1Fa18FwwT8Eg/s1600/1.JPG" alt="">
+         <h3>Crab Masala</h3>
+                <p>&#8377;350</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d12"><img src="https://i.ytimg.com/vi/X8QxA08VRio/maxresdefault.jpg" alt="">Corn Cheese Balls
+         <h3>Egg Pakora</h3>
+                <p>&#8377;150</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d13"><img src="https://th.bing.com/th/id/R.1a1b178d54edcf5707102d0587717620?rik=MzHXsaa3wdeEeA&riu=http%3a%2f%2ftheapollorecipe.com%2fwp-content%2fuploads%2f2022%2f08%2fPOMFRET-FISH-TAWA-FRY.jpg&ehk=WxttrZGDyebX8vzauNmFh9cSXiPJpgMidCpqsZQTvz4%3d&risl=&pid=ImgRaw&r=0" alt="">
+         <h3>Fish Tandoori</h3>
+                <p>&#8377;260</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+         <div class="items" id="d14"><img src="https://lizarecipes.com/wp-content/uploads/2025/02/Image_1-30.png" alt="">
+         <h3>Chicken Spring Roll</h3>
+                <p>&#8377;210</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+          <div class="items" id="d15"><img src="https://www.thetinytaster.com/wp-content/uploads/2021/02/PXL_20210224_074238368-scaled.jpg" alt="">
+         <h3>Prawn Koliwada</h3>
+                <p>&#8377;290</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+          <div class="items" id="d16"><img src="https://danukkad.com/wp-content/uploads/2024/01/Mutton-Seekh-Kebab-Roll.jpg" alt="">
+         <h3>Mutton Sheekh Roll</h3>
+                <p>&#8377;290</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+    </div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    </script>
+</body>
+</html>

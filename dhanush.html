@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           
+            height: 100vh;
+            background: url(https://i.pinimg.com/1200x/0f/64/8a/0f648a264b8179e13a7c6ff540da4e4f.jpg);
+            background-size:130% 130%;
+            animation: slide 20s linear infinite alternate;
+            
+           
+            
+        }
+        @keyframes slide{
+            0%{background-position: 0% 70%;}
+            25%{background-position: 50% 100%;}
+           50%{background-position: 0% 100%;}
+            100%{background-position: 0% 0%;}
+        
+        }
+        
+        h1{
+
+            display: inline-block;
+            font-size: 50px;
+            color: rgb(235, 218, 214);
+            border-top-left-radius: 80px;
+            border-bottom-right-radius: 70px;
+            font-style: oblique;
+            font-family:'Brush Script MT', cursive;
+            box-shadow: 10px 0px 40px rgb(174, 30, 30);
+            margin: 20px auto; 
+            padding: 10px 20px;
+            
+        }
+        h2{
+            display: inline-block;             /* border fits only content */
+            text-align: center;
+            text-shadow: 1px 1px 4px rgb(13, 15, 15);
+             display: flex;
+             justify-content: center;
+        }
+       
+        @keyframes bounce{
+                       50%{
+                       transform: translateX(10px,20px);
+                       }
+  
+                       50% {
+                       transform: translate(-20px,-10PX);
+                       }
+                      }
+       
+          .bounce {
+              
+               animation: bounce 2s infinite;
+                }
+         div>button{
+            border: none;
+            padding: 5px 5px;
+            border-radius: 40px 30px 40px 30px;
+            background-color: black;
+            display: block;
+            color: rgb(229, 218, 218);
+            
+            margin: 20px auto 0 auto;
+           font-family:'Brush Script MT', cursive ;
+           font-size: 40px;
+           
+         }
+         div>button:hover{
+            color: aquamarine;
+            cursor: pointer;
+            background-color: rgb(40, 205, 40);
+         }
+       
+    </style>
+</head>
+
+<body>
+    <div class="title">
+    <h1 class="bounce"> WelCome To RSD👑🍽️</h1>
+    <h2  style="font-family: 'Brush Script MT', cursive; font-size: 100px; color:#98a99c;">The secret ingredient is always love</h2>
+    <button onclick="Menu()">MeNu</button>
+    </div>
+
+  
+
+<script>
+  function Menu() {
+    window.location.href = "Menu.html";
+  }
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+ .back-bar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ff85c1;  /* rose color */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255,133,193,0.5);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: white;
+  color: #ff85c1;
+  box-shadow: 0 0 20px rgba(255,133,193,0.8);
+}
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://th.bing.com/th/id/R.d054e7d88aa773db18a9b1a513735c2f?rik=6jjnFaRdCcdEiw&riu=http%3a%2f%2fwww.gourmandize.com%2fmedia%2fmini-cheese-pizza_crop.jpg%2frh%2fmini-homemade-cheese-pizza.jpg&ehk=il1FXRCYUIv%2fS5ixaMSFDykaZzGeeSDVLVdl7cU%2b%2fFg%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <div class="info">
+            <h3 >Mini Cheese Pizza</h3>
+                <p>&#8377;99</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+        <div class="items" id="d2"><img src="https://shopznowpk.com/wp-content/uploads/2021/05/Stainless-Steel-Mini-French-Fries-Basket-2.jpg" alt="">
+         <div class="info">
+            <h3>French Fries Basket</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d3"><img src="https://plantyou.com/wp-content/uploads/2023/02/BDAFDF05-0E62-4497-A341-826922F7F9E2-1443x2048.jpeg" alt="">
+         <h3>Veggie Nuggets</h3>
+                <p>&#8377;70</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d4"><img src="https://tse1.mm.bing.net/th/id/OIP.HjX1dA1KF8t0bhXXP8w4nQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Chicken Popcorn</h3>
+                <p>&#8377;180</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d5"><img src="https://www.cookwithmanali.com/wp-content/uploads/2018/12/White-Sauce-Pasta-768x1164.jpg" alt="">
+         <h3>Pasta in White Sauce</h3>
+                <p>&#8377;80</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d6"> <img src="https://tse2.mm.bing.net/th/id/OIP.EOA6FPwoDii80JpGA5LyHQHaEa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3> Mini Chicken Burger</h3>
+                <p>&#8377;99</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       <div class="items" id="d7"><img src="https://tse3.mm.bing.net/th/id/OIP.jl2KSAjHBb__qVn_p7dX-AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+     <h3>Butter Noodles</h3>
+                <p>&#8377;80</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d8"><img src="https://grillonadime.com/wp-content/uploads/2022/08/grilled-cheese-4-2-1024x1024.jpg" alt="">
+         <h3>Grilled Cheese Sandwich</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d9"><img src="https://recipetineats.com/wp-content/uploads/2020/01/Fish-Fingers_8.jpg" alt="">
+         <h3>Fish Fingers</h3>
+                <p>&#8377;80</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d10"><img src="https://tse4.mm.bing.net/th/id/OIP.U2gKs_7vwNcVQT7dlOdI4QHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <h3>Mini Pancakes</h3>
+                <p>&#8377;60</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d11"><img src="https://img.freepik.com/premium-photo/nutritious-indulgence-fresh-fruit-acai-bowl-filled-with-wholesome-delights-ai_94628-5238.jpg" alt="">
+         <div class="info">
+            <h3>Fruit Bowl Delight</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d12"><img src="https://cookingwithcocktailrings.com/wp-content/uploads/2021/02/img_60395284f1051.jpg" alt="">
+         <div class="info">
+            <h3>Chocolate Milkshake</h3>
+                <p>&#8377;80</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+          <div class="items" id="d13"><img src="https://hillstreetgrocer.com/application/files/7415/4295/3234/waffles_with_valhalla_ice_cream.jpg" alt="">
+         <div class="info">
+            <h3>Mini Waffles with Ice Cream</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div> 
+        <div class="items" id="d14"><img src="https://www.patiaalahouse.com/upload/Vegetable-Fried-Rice-1580291746.jpg" alt="">
+         <div class="info">
+            <h3>Veg Fried Rice</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d15"><img src="https://www.tasteofhome.com/wp-content/uploads/2022/12/Homemade-Smiley-Fries_EXPS_CCR22_270594_DR_10_27_4b.jpg?fit=700,1024" alt="">
+         <div class="info">
+            <h3>Smiley Potato Fries</h3>
+                <p>&#8377;90</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+      
+      
+    </div>
+    <div class="back-bar">
+  <button class="back-button" onclick="goBack()">
+     ⬅️Back to Menu
+
+  </button>
+</div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    function goBack() {
+    window.location.href = "Menu.html";
+    }
+    </script>
+</body>
+</html>

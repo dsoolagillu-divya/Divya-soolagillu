@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+    }
+        .container{
+           display: flex;
+           gap: 80px;
+           flex-wrap: wrap;
+           
+           padding: 65px;
+           
+          
+           }
+           .items{
+            
+            width: 280px; /* 3 per row */
+             overflow: hidden;
+             text-align: center;
+             border: 3px solid black;
+             border-radius: 12px;
+             overflow: hidden;
+             transition: transform 0.3s,border-color 0.3s;
+            
+           }
+           .items img{
+            height:300px ;
+            width: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+            display: block;
+           
+           }
+           .info{
+                padding: 15px;
+            }
+            .info h3{
+                margin-bottom: 8px;
+                font-size: 18px;
+
+            }
+            .items:hover{
+                transform: scale(1.03);
+                border-color: black;
+            }
+            button{
+                height: 43px;
+                width: 45px;
+            }
+           
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="d1"><img src="https://natashaskitchen.com/wp-content/uploads/2019/08/Caprese-Salad-6.jpg" alt="">
+            <div class="info">
+            <h3> Caprese Salad</h3>
+                <p>&#8377;290</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button>
+            </div>
+            </div>
+        <div class="items" id="d2"><img src="https://img.freepik.com/premium-photo/classic-greek-salad-with-feta-cheese-olives-tomatoes_1114710-7881.jpg" alt="">
+         <div class="info">
+            <h3>Greek Salad (with feta cheese & olives)</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d3"><img src="https://www.myforkinglife.com/wp-content/uploads/2020/06/quinoa-avocado-salad-cropped.jpg" alt="">
+         <h3>Quinoa & Avocado Salad</h3>
+                <p>&#8377;350</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d4"><img src="https://bing.com/th?id=OSK.bc450c8fa9f96d0a33c8175d204d8665" alt="">
+         <h3>Beetroot & Goat Cheese Salad</h3>
+                <p>&#8377;180</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d5"><img src="https://www.goodlifeeats.com/wp-content/uploads/2022/07/Recipe-for-Watermelon-Feta-Mint-Salad.jpg" alt="">
+         <h3>Watermelon Feta Mint Salad</h3>
+                <p>&#8377;280</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d6"> <img src="https://www.acedarspoon.com/wp-content/uploads/2020/04/Mediterranean-Couscous-Salad-Image-11-1076x1536.jpg" alt="">
+         <h3>Mediterranean Couscous Salad </h3>
+                <p>&#8377;380</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+       <div class="items" id="d7"><img src="https://diethood.com/wp-content/uploads/2022/07/heirloom-tomato-burrata-salad-11-1024x1536.jpg" alt="">
+     <h3>Burrata & Tomato Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d8"><img src="https://live.staticflickr.com/65535/49989643692_592d4bb838_c.jpg" alt="">
+         <h3>Caesar Salad with Grilled Chicken</h3>
+                <p>&#8377;180</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d9"><img src="https://feelgoodfoodie.net/wp-content/uploads/2021/05/Smoked-Salmon-Salad-9.jpg" alt="">
+         <h3>Smoked Salmon Salad</h3>
+                <p>&#8377;270</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d10"><img src="https://img.taste.com.au/HrcaJP_U/taste/2010/07/prawn-mango-and-avocado-salad-118962-2.jpg" alt="">
+         <h3>Prawn & Mango Salad</h3>
+                <p>&#8377;280</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+        <div class="items" id="d11"><img src="https://littlespicejar.com/wp-content/uploads/2015/08/Asian-Sesame-Chicken-Salad-10-710x1065.jpg" alt="">
+         <div class="info">
+            <h3>Asian Sesame Chicken Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+        <div class="items" id="d12"><img src="https://www.recipetineats.com/wp-content/uploads/2021/02/Salade-Nicoise-v2_7.jpg" alt="">
+         <div class="info">
+            <h3>Tuna Nicoise Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div>
+          <div class="items" id="d13"><img src="https://d33wubrfki0l68.cloudfront.net/229ca532378c0225b95acd97083c787afc077aba/bd790/images/uploads/2018_07_26_classic_greek_village_salad_0.jpg" alt="">
+         <div class="info">
+            <h3>Greek Village Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div> 
+          <div class="items" id="d14"><img src="https://www.cookingclassy.com/wp-content/uploads/2017/04/kale-orange-salad-9.jpg" alt="">
+         <div class="info">
+            <h3>Kale & Orange Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div> 
+          <div class="items" id="d15"><img src="https://tse4.mm.bing.net/th/id/OIP.ywRr3ZzA0w4camyyOo78LwHaF6?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3https://tse4.mm.bing.net/th/id/OIP.ywRr3ZzA0w4camyyOo78LwHaF6?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+         <div class="info">
+            <h3>Grilled Fish Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div> 
+          <div class="items" id="d16"><img src="https://i.pinimg.com/736x/1c/8a/4d/1c8a4d86dc38d442945a032114ad6651.jpg" alt="">
+         <div class="info">
+            <h3>Seafood Medley Salad</h3>
+                <p>&#8377;230</p>
+                <button onclick="decrement(this)">-</button>
+                <span class="count">0</span>
+                <button onclick="increment(this)">+</button></div>
+                </div> 
+               
+       
+    </div>
+    <script>
+       function increment(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      count++;
+      countSpan.textContent = count;
+    }
+
+    function decrement(btn) {
+      const countSpan = btn.parentElement.querySelector(".count");
+      let count = parseInt(countSpan.textContent);
+      if (count > 0) count--;
+      countSpan.textContent = count;
+    }
+    </script>
+</body>
+</html>
